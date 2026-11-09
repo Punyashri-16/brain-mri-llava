@@ -1,4 +1,6 @@
 
+
+
 # Python
 __pycache__/
 *.py[cod]
@@ -24,9 +26,3 @@ dist/
 .vscode/
 .DS_Store
 Thumbs.db
-.venv/
-__pycache__/
-*.pyc
-*.nii
-*.nii.gz
-data/dataset/
