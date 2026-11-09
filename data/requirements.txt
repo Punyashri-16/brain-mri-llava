@@ -1,0 +1,8 @@
+numpy
+nibabel
+matplotlib
+pandas
+scipy
+h5py
+Pillow
+opencv-python
