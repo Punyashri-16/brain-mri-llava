@@ -1,0 +1,43 @@
+
+{
+  "project": "Radiology-Guided Explainable Brain MRI Analysis using LLaVA",
+  "experiment_id": "baseline_01",
+  "experiment_status": "pending",
+  "model": {
+    "name": "llava",
+    "runtime": "Ollama",
+    "temperature": 0.1,
+    "max_generated_tokens": 350
+  },
+  "dataset": {
+    "name": "BraTS 2021",
+    "sample_id": "BraTS2021_00495",
+    "input_modality": "T1CE",
+    "input_image": "T1CE_slice.png",
+    "image_dimensions": "336x336",
+    "reference_mask_available": true,
+    "mask_used_as_model_input": false
+  },
+  "prompt_configurations": [
+    "generic",
+    "tumor_focused",
+    "radiology_guided",
+    "safety_aware"
+  ],
+  "evaluation": {
+    "metric": "Assessable Field Rate",
+    "total_report_fields": 7,
+    "measures": [
+      "assessable_fields",
+      "non_assessable_fields",
+      "completeness_percentage",
+      "uncertainty_provided"
+    ],
+    "clinical_accuracy_assessed": false
+  },
+  "notes": [
+    "All prompt configurations use the same MRI input.",
+    "Assessable Field Rate does not measure factual correctness.",
+    "This is an exploratory single-sample experiment."
+  ]
+}
