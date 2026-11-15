@@ -26,3 +26,6 @@ dist/
 .vscode/
 .DS_Store
 Thumbs.db
+# Research dataset files
+data/dataset/
+data/downloads/
