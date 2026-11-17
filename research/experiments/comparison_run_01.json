@@ -1,0 +1,134 @@
+{
+  "status": "success",
+  "total_prompts": 4,
+  "total_duration_seconds": 280.52,
+  "results": [
+    {
+      "status": "success",
+      "prompt_type": "generic",
+      "report": {
+        "findings": "Not assessable",
+        "location": "Not assessable",
+        "lesion_characteristics": "Not assessable",
+        "edema": "Not assessable",
+        "mass_effect": "Not assessable",
+        "interpretation": "Not assessable",
+        "uncertainty": "The image provided is a single slice of a brain MRI, which is not sufficient for a comprehensive assessment of the brain's structures and any potential abnormalities. A complete assessment would require a series of images covering the entire brain, as well as additional clinical information. The image does not provide enough context to make any definitive findings or interpretations."
+      },
+      "inference_time_seconds": 99.23,
+      "evaluation": {
+        "total_fields": 7,
+        "assessable_fields": [
+          "uncertainty"
+        ],
+        "non_assessable_fields": [
+          "findings",
+          "location",
+          "lesion_characteristics",
+          "edema",
+          "mass_effect",
+          "interpretation"
+        ],
+        "completeness_percentage": 14.29,
+        "uncertainty_provided": true,
+        "evaluation_note": "Structural completeness only. This does not measure medical accuracy or factual grounding."
+      },
+      "disclaimer": "Research and educational use only. This output is not a clinical diagnosis."
+    },
+    {
+      "status": "success",
+      "prompt_type": "tumor_focused",
+      "report": {
+        "findings": "Not assessable",
+        "location": "Not assessable",
+        "lesion_characteristics": "Not assessable",
+        "edema": "Not assessable",
+        "mass_effect": "Not assessable",
+        "interpretation": "Not assessable",
+        "uncertainty": "Not assessable"
+      },
+      "inference_time_seconds": 30.85,
+      "evaluation": {
+        "total_fields": 7,
+        "assessable_fields": [],
+        "non_assessable_fields": [
+          "findings",
+          "location",
+          "lesion_characteristics",
+          "edema",
+          "mass_effect",
+          "interpretation",
+          "uncertainty"
+        ],
+        "completeness_percentage": 0,
+        "uncertainty_provided": false,
+        "evaluation_note": "Structural completeness only. This does not measure medical accuracy or factual grounding."
+      },
+      "disclaimer": "Research and educational use only. This output is not a clinical diagnosis."
+    },
+    {
+      "status": "success",
+      "prompt_type": "radiology_guided",
+      "report": {
+        "findings": "The image shows a brain MRI with a visible lesion in the left hemisphere, specifically in the frontal lobe. The lesion appears to be a high-grade glioma, characterized by its irregular shape and the presence of contrast enhancement, which suggests the presence of necrotic tissue or a high degree of cellularity.",
+        "location": "Left frontal lobe",
+        "lesion_characteristics": "High-grade glioma with irregular shape and contrast enhancement",
+        "edema": "Not assessable",
+        "mass_effect": "Not assessable",
+        "interpretation": "The presence of a high-grade glioma in the left frontal lobe may suggest a potential impact on cognitive function, motor function, or both, depending on the size and location of the lesion. However, without additional clinical information, it is not possible to provide a definitive interpretation of the MRI findings.",
+        "uncertainty": "The image does not provide sufficient information to assess the presence of surrounding edema or mass effect. Additionally, without clinical context, it is not possible to provide a definitive interpretation of the MRI findings."
+      },
+      "inference_time_seconds": 69.35,
+      "evaluation": {
+        "total_fields": 7,
+        "assessable_fields": [
+          "findings",
+          "location",
+          "lesion_characteristics",
+          "interpretation",
+          "uncertainty"
+        ],
+        "non_assessable_fields": [
+          "edema",
+          "mass_effect"
+        ],
+        "completeness_percentage": 71.43,
+        "uncertainty_provided": true,
+        "evaluation_note": "Structural completeness only. This does not measure medical accuracy or factual grounding."
+      },
+      "disclaimer": "Research and educational use only. This output is not a clinical diagnosis."
+    },
+    {
+      "status": "unstructured",
+      "prompt_type": "safety_aware",
+      "report": {
+        "findings": "{\n    \"findings\": \"The image shows a brain MRI with a visible lesion in the left hemisphere, which appears to be a mass or a tumor. The lesion is located in the frontal lobe, near the border with the temporal lobe. The lesion has a well-defined, irregular shape with a central area of low signal intensity, which could suggest necrosis or a cystic component. The surrounding tissue has increased signal intensity, which is indicative of edema. There is no clear evidence of mass effect, which would suggest significant compression or displacement of surrounding brain tissue. The interpretation of this lesion would require additional clinical information and imaging studies.\",\n    \"location\": \"Left frontal lobe, near the border with the temporal lobe\",\n    \"lesion_characteristics\": \"Well-defined, irregular shape with a central area of low signal intensity, indicative of necrosis or a cystic component, surrounded by tissue with increased signal intensity, indicative of edema\",\n    \"edema\": \"Surrounding tissue has increased signal intensity\",\n    \"mass_effect\": \"No clear evidence of mass effect\",\n    \"interpretation\": \"The image suggests a possible mass or tumor in the left frontal lobe, which would require further clinical evaluation and imaging studies for a definitive diagnosis and treatment plan.\",\n    \"uncertainty\": \"The interpretation of this lesion is limited by the lack of additional clinical information and imaging studies. The presence of a mass or tumor in the brain can have significant implications for the patient's health and quality of life",
+        "location": "Not provided by model",
+        "lesion_characteristics": "Not provided by model",
+        "edema": "Not provided by model",
+        "mass_effect": "Not provided by model",
+        "interpretation": "Unstructured model output; no interpretation extracted.",
+        "uncertainty": "The model did not return valid structured JSON. Manual review is required."
+      },
+      "inference_time_seconds": 81.1,
+      "evaluation": {
+        "total_fields": 7,
+        "assessable_fields": [
+          "findings",
+          "interpretation",
+          "uncertainty"
+        ],
+        "non_assessable_fields": [
+          "location",
+          "lesion_characteristics",
+          "edema",
+          "mass_effect"
+        ],
+        "completeness_percentage": 42.86,
+        "uncertainty_provided": true,
+        "evaluation_note": "Structural completeness only. This does not measure medical accuracy or factual grounding."
+      },
+      "disclaimer": "Research and educational use only. This output is not a clinical diagnosis."
+    }
+  ]
+}
