@@ -30,3 +30,5 @@ __pycache__/
 *.nii
 *.nii.gz
 data/dataset/
+BraTS2021_00495_Package/
+BraTS2021_00495_Package.zip

@@ -1,17 +1,31 @@
 
 from pathlib import Path
+import sys
+
 import nibabel as nib
 import numpy as np
 
-DATASET_DIR = Path("data/dataset/samples/BraTS2021_00495")
+DEFAULT_SAMPLE = "BraTS2021_00621"
+SAMPLES_DIR = Path("data/dataset/samples")
+
+sample_id = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_SAMPLE
+DATASET_DIR = SAMPLES_DIR / sample_id
 
 MODALITIES = ["t1", "t1ce", "t2", "flair", "seg"]
 
+
 def inspect_brats():
+    print(f"Inspecting sample: {sample_id}")
+    print(f"Dataset directory: {DATASET_DIR}")
+
+    if not DATASET_DIR.exists():
+        print("ERROR: Sample directory does not exist.")
+        return
+
     shapes = {}
 
     for modality in MODALITIES:
-        files = list(DATASET_DIR.glob(f"*_{{modality}}.nii.gz".format(modality=modality)))
+        files = list(DATASET_DIR.glob(f"*_{modality}.nii.gz"))
 
         if not files:
             print(f"Missing file: {modality}")
@@ -43,6 +57,7 @@ def inspect_brats():
             print(shapes)
     else:
         print("Some files are missing. Check the dataset folder.")
+
 
 if __name__ == "__main__":
     inspect_brats()
